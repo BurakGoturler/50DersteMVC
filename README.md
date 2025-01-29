@@ -2,8 +2,8 @@
 
 ## 📌 Kaynak
 
-Bu proje, **Murat Yücedağ** tarafından hazırlanan **"[50 Derste MVC](https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj)"**  
-YouTube eğitim serisi takip edilerek başarıyla tamamlanmıştır.  
+**Murat Yücedağ** tarafından hazırlanan **"[50 Derste MVC](https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj)"**  
+YouTube eğitim serisi takip edilerek başarıyla tamamlandığum proje.
 
 ### Kullanılan Veri tabanı Tabloları:
 - **tbl_satıslar**  
