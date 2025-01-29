@@ -1,4 +1,4 @@
-#50 Derste MVC
+# 50 Derste MVC
 
 ## 📌 Kaynak
 
