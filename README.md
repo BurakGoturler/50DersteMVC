@@ -1,3 +1,39 @@
+#50 Derste MVC
+
+## 📌 Kaynak
+
+Bu proje, **Murat Yücedağ** tarafından hazırlanan **"[50 Derste MVC](https://www.youtube.com/playlist?list=PLKnjBHu2xXNPVta5RCvahuvJ2m7wVQ31K)"**  
+YouTube eğitim serisi takip edilerek başarıyla tamamlanmıştır.  
+
+### Kullanılan Veri tabanı Tabloları:
+- **tbl_satıslar**  
+- **tbl_ürünler**  
+- **tbl_kategorriler**  
+- **tbl_müşteriler**  
+
+## 🚀 Öne Çıkan Özellikler
+
+✅ **MVC Mimarisi:** Model-View-Controller (MVC) tasarım desenine uygun olarak geliştirilmiştir.  
+✅ **Veri tabanı Entegrasyonu:** **MSSQL** kullanılarak veri saklama ve yönetimi sağlanmıştır.  
+✅ **LINQ Sorguları:** Verilerin verimli bir şekilde işlenmesi ve yönetilmesi için **LINQ** kullanılmıştır.  
+✅ **jQuery Entegrasyonu:** Sayfalama, arama paneli ve dinamik öğeler için **jQuery** kullanılmıştır.  
+✅ **Bildirimler:** Kullanıcı geri bildirimleri için **alert bildirimleri** entegre edilmiştir.  
+✅ **ADO .NET Kullanımı:** Veri tabanı işlemleri için **ADO .NET** teknolojisinden yararlanılmıştır.  
+✅ **Doğrulama (Validation):** **DataAnnotations** kullanılarak istemci ve sunucu taraflı doğrulamalar sağlanmıştır.  
+
+## 📄 Projede Kullanılan Sayfalama Paketleri
+
+Projede **sayfalama işlemi** için **NuGet Package Manager** üzerinden aşağıdaki paketler kullanılmıştır:  
+
+- **PagedList**: [PagedList 1.17.0](https://www.nuget.org/packages/PagedList/1.17.0?_src=template)  
+- **PagedList.Mvc**: [PagedList.Mvc 4.5.0](https://www.nuget.org/packages/PagedList.Mvc/4.5.0?_src=template)  
+
+## 🔧 Kurulum ve Kullanım
+
+1. **Depoyu Klonlayın:**  
+   ```sh
+   git clone https://github.com/kullanici_adiniz/proje_adi.git
+
 ## Projeye ait görseller
 
 ![3](https://github.com/user-attachments/assets/a37fa0b4-d04f-45f1-b241-256d1fc8b73e)
@@ -8,4 +44,3 @@
 
 ## Projeye ait veri tabanı diyagramı
 ![diyagram](https://github.com/user-attachments/assets/3af4d24d-c67f-4a9f-8c30-8453b6990e5c)
-
