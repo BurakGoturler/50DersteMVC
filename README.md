@@ -7,4 +7,5 @@
 ![4](https://github.com/user-attachments/assets/536f4556-3fef-498d-b339-3713153bc09e)
 
 ## Projeye ait veri tabanı diyagramı
-![8](https://github.com/user-attachments/assets/a0cbe0e0-e190-44a2-b2ae-fde2f15a95d5)
+![diyagram](https://github.com/user-attachments/assets/3af4d24d-c67f-4a9f-8c30-8453b6990e5c)
+
