@@ -1,0 +1,46 @@
+﻿@using MvcStok.Models.Entity
+
+<!-- Çekmek istediğimiz tabloyu liste olarak tutan bir model. -->
+@model List<TBL_MUSTERILER>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p><b>Müşteri Ara: </b>@Html.TextBox("p")
+    <input type="submit" value="Ara" />
+    </p>
+}
+
+
+<!-- Listeleme işlemi için table kullanıyoruz. -->
+<table class="table table-bordered">
+    <tr>
+        <th>Müşteri ID</th>
+        <th>Müşteri AD</th>
+        <th>Müşteri SOYAD</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Alert ile Silme İşlemi</th>
+    </tr>
+    <!-- Verileri işlemek/görüntülemek/listelemek için bir tbody alanı tanımlayıp bu verileri listeleme işlemini sağlayan döngü oluşturduk. -->
+    <tbody>
+        @foreach (var musteri in Model)
+        {
+            <tr>
+                <th>@musteri.MUSTERIID</th>
+                <td>@musteri.MUSTERIAD</td>
+                <td>@musteri.MUSTERISOYAD</td>
+                <td><a href="/Musteri/MusteriSil/@musteri.MUSTERIID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Musteri/MusteriGetir/@musteri.MUSTERIID" class="btn btn-success">Güncelle</a></td>
+                <td>@Html.ActionLink("Alert kullanımı ile Sil", "MusteriSil", new { id = musteri.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Silmek istediğinize emin misiniz?')" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Musteri/YeniMusteri/" class="btn btn-success">Yeni Müşteri Ekle</a>

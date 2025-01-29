@@ -1,0 +1,39 @@
+﻿@using MvcStok.Models.Entity;
+@using PagedList.Mvc;
+@using PagedList;
+
+<!-- Çekmek istediğimiz tabloyu liste olarak tutan bir model. -->
+@*@model List<TBL_KATEGORILER>*@
+
+@model PagedList.IPagedList<TBL_KATEGORILER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!-- Listeleme işlemi için table kullanıyoruz. -->
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori ID</th>
+        <th>Kategori AD</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <!-- Verileri işlemek/görüntülemek/listelemek için bir tbody alanı tanımlayıp bu verileri listeleme işlemini sağlayan döngü oluşturduk. -->
+    <tbody>
+        @foreach (var kategori in Model)
+        {
+            <tr>
+                <th>@kategori.KATEGORIID</th>
+                <td>@kategori.KATEGORIAD</td>
+                <td><a href="/Kategori/KategoriSil/@kategori.KATEGORIID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Kategori/KategoriGetir/@kategori.KATEGORIID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new {sayfa}))
+
+<a href="/Kategori/YeniKategori/" class="btn btn-success">Yeni Kategori Ekle</a>

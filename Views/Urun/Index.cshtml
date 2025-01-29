@@ -1,0 +1,59 @@
+﻿@using MvcStok.Models.Entity
+
+<!-- Çekmek istediğimiz tabloyu liste olarak tutan bir model. -->
+@model List<TBL_URUNLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!-- Listeleme işlemi için table kullanıyoruz. -->
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün ID</th>
+            <th>Ürün AD</th>
+            <th>Ürün Marka</th>
+            <th>Ürün Kategori</th>
+            <th>Ürün Fiyat</th>
+            <th>Ürün Stok</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <!-- Verileri işlemek/görüntülemek/listelemek için bir tbody alanı tanımlayıp bu verileri listeleme işlemini sağlayan döngü oluşturduk. -->
+    <tbody>
+        @foreach (var urun in Model)
+        {
+            <tr>
+                <th>@urun.URUNID</th>
+                <td>@urun.URUNAD</td>
+                <td>@urun.MARKA</td>
+                <td>@urun.TBL_KATEGORILER.KATEGORIAD</td>
+                <td>@urun.FIYAT</td>
+                <td>@urun.STOK</td>
+                <td><a href="/Urun/UrunSil/@urun.URUNID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Urun/UrunGetir/@urun.URUNID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Urun/YeniUrun/" class="btn btn-success">Yeni Ürün Ekle</a>
+
+@*<script type="text/javascript" src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css" rel="stylesheet" />*@
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+<!-- Listeleme -->
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+<script>
+    $('#tbl1').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Turkish.json"
+        }
+    });
+</script>
