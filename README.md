@@ -23,11 +23,14 @@ YouTube eğitim serisi takip edilerek başarıyla tamamlandığum proje.
 
 ## 📄 Projede Kullanılan Sayfalama Paketleri
 
-Projede **sayfalama işlemi** için **NuGet Package Manager** üzerinden aşağıdaki paketler kullanılmıştır:  
+Projede MVC üzerinden **sayfalama işlemi** için **NuGet Package Manager** üzerinden aşağıdaki paketler kullanılmıştır:  
 
 - **PagedList**: [PagedList 1.17.0](https://www.nuget.org/packages/PagedList/1.17.0?_src=template)  
 - **PagedList.Mvc**: [PagedList.Mvc 4.5.0](https://www.nuget.org/packages/PagedList.Mvc/4.5.0?_src=template)  
 
+Projede jQuery üzerinden **sayfalama işlemi** için ise **NuGet Package Manager** üzerinden aşağıdaki paket kullanılmıştır:  
+- **jquery.datatables**: [jquery.datatables 1.10.15](https://www.nuget.org/packages/jquery.datatables/1.10.15?_src=template)
+  
 ## 🔧 Kurulum ve Kullanım
 
 1. **Depoyu Klonlayın:**  
